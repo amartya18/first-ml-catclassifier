@@ -3,9 +3,11 @@ from fastai.basics import load_learner
 from PIL import Image
 from pathlib import Path
 from fastai.vision.utils import PILImage
+from flask_cors import CORS
 import json
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/easter-egg')
 def egg():
